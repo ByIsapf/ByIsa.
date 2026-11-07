@@ -1,0 +1,2183 @@
+/* ==========================================
+   BYisa | PORTFÓLIO
+   ========================================== */
+
+/* CORES PRINCIPAIS */
+
+:root {
+    --bg: #fffdfd;
+    --white: #ffffff;
+
+    --text: #29242b;
+    --secondary: #756b73;
+
+    --accent: #c44c89;
+    --accent-dark: #a83d72;
+    --accent-soft: #fae9f1;
+
+    --header-bg: #fbe7f0;
+    --header-border: #f1d4e1;
+
+    --border: #f0e7eb;
+
+    --shadow: 0 12px 35px rgba(132, 73, 103, 0.07);
+}
+
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 135px;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+::selection {
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+}
+
+/* ==========================================
+   HEADER FIXA
+   ========================================== */
+
+.header {
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+
+    width: 90%;
+    max-width: 1120px;
+
+    margin: 24px auto 0;
+
+    background: var(--header-bg);
+
+    border: 1px solid var(--header-border);
+    border-radius: 100px;
+
+    box-shadow: 0 6px 24px rgba(196, 76, 137, 0.08);
+}
+
+/* NAVBAR */
+
+.navbar {
+    min-height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(35px, 7vw, 95px);
+    padding: 12px 35px;
+}
+
+/* LOGO */
+
+.logo {
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1.8px;
+
+    white-space: nowrap;
+    color: var(--text);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+/* LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.nav-links a {
+    padding: 9px 16px;
+
+    border-radius: 100px;
+
+    font-size: 13px;
+    font-weight: 600;
+    color: #69515e;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--accent-dark);
+}
+
+/* ==========================================
+   INÍCIO - HERO
+   ========================================== */
+
+.hero {
+    width: 100%;
+    padding: 56px 0 105px;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(0, 0.85fr);
+
+    align-items: start;
+    gap: 65px;
+}
+
+/* APRESENTAÇÃO */
+
+.hero-content {
+    padding-top: 30px;
+    min-width: 0;
+}
+
+/* ETIQUETA SUPERIOR */
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 15px;
+
+    background: var(--accent-soft);
+
+    border: 1px solid #f3dce6;
+    border-radius: 100px;
+
+    color: var(--accent-dark);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.eyebrow-dot {
+    width: 7px;
+    height: 7px;
+
+    background: var(--accent);
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.hero h1 {
+    margin-top: 26px;
+
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    font-size: clamp(36px, 4.5vw, 59px);
+    font-weight: 800;
+
+    letter-spacing: -2.4px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--accent);
+
+    background-image: linear-gradient(
+        transparent 83%,
+        #f8d6e6 83%
+    );
+
+    background-repeat: no-repeat;
+}
+
+/* DESCRIÇÃO */
+
+.description {
+    max-width: 510px;
+    margin-top: 24px;
+
+    color: var(--secondary);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+/* ==========================================
+   BOTÕES DA APRESENTAÇÃO
+   ========================================== */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 48px;
+    padding: 12px 23px;
+
+    border-radius: 100px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* BOTÃO PRINCIPAL */
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--white);
+
+    border: 1px solid var(--accent);
+
+    box-shadow: 0 7px 18px rgba(196, 76, 137, 0.14);
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+
+    transform: translateY(-2px);
+}
+
+.btn-primary span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+/* BOTÃO SECUNDÁRIO */
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--text);
+
+    border: 1px solid #eadbe2;
+}
+
+.btn-secondary:hover {
+    color: var(--accent-dark);
+    border-color: var(--accent);
+    background: #fff8fb;
+}
+
+/* ==========================================
+   DETALHE ABAIXO DOS BOTÕES
+   ========================================== */
+
+.hero-detail {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+    margin-top: 42px;
+}
+
+.detail-line {
+    width: 28px;
+    height: 2px;
+
+    background: var(--accent);
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+.hero-detail p {
+    color: #94838d;
+
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* ==========================================
+   FOTO DA APRESENTAÇÃO
+   ========================================== */
+
+.hero-photo-wrap {
+    position: relative;
+
+    width: 100%;
+    max-width: 340px;
+
+    justify-self: end;
+    isolation: isolate;
+}
+
+/* DECORAÇÃO ATRÁS DA FOTO */
+
+.photo-decoration {
+    position: absolute;
+
+    width: 85%;
+    height: 85%;
+
+    top: -15px;
+    right: -15px;
+
+    background: #f8deea;
+    border-radius: 30px;
+
+    z-index: -1;
+}
+
+/* MOLDURA DA FOTO */
+
+.hero-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    background: #fcecf3;
+
+    border: 7px solid var(--white);
+    border-radius: 28px;
+
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* ESPAÇO RESERVADO */
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.placeholder-icon {
+    font-size: 29px;
+    opacity: 0.65;
+}
+
+/* FOTO REAL */
+
+.hero-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ETIQUETA DA FOTO */
+
+.photo-label {
+    position: absolute;
+
+    bottom: -17px;
+    left: -22px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 100px;
+
+    box-shadow: 0 8px 24px rgba(132, 73, 103, 0.09);
+
+    color: #6d5662;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.label-symbol {
+    color: var(--accent);
+    font-size: 17px;
+}
+
+/* ==========================================
+   CONFIGURAÇÕES GERAIS DAS SEÇÕES
+   ========================================== */
+
+.section {
+    padding: 90px 0;
+    border-top: 1px solid var(--border);
+}
+
+.section-header {
+    margin-bottom: 22px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.section h2 {
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+    line-height: 1.3;
+}
+
+.dot {
+    color: var(--accent);
+}
+
+.section-description {
+    max-width: 560px;
+
+    color: var(--secondary);
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* ==========================================
+   SOBRE MIM
+   ========================================== */
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 105px 0 115px;
+
+    background: linear-gradient(
+        180deg,
+        #fffafb 0%,
+        #fffdfd 100%
+    );
+}
+
+/* CABEÇALHO */
+
+.about-heading {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 55px;
+}
+
+.about-heading-text {
+    position: relative;
+    z-index: 1;
+}
+
+.about-heading .section-label {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-heading h2 {
+    max-width: 750px;
+
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 800;
+
+    line-height: 1.2;
+    letter-spacing: -2.5px;
+
+    color: var(--text);
+}
+
+.about-heading h2 span {
+    color: var(--accent);
+}
+
+.about-subtitle {
+    margin-top: 16px;
+
+    color: var(--secondary);
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* DECORAÇÃO ROSA */
+
+.about-decoration {
+    position: absolute;
+
+    right: 35px;
+    top: 0;
+
+    font-size: 145px;
+    line-height: 1;
+
+    color: #f5dce8;
+    opacity: 0.7;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ==========================================
+   LAYOUT DO SOBRE MIM
+   ========================================== */
+
+.about-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, 0.9fr);
+
+    align-items: start;
+    gap: 85px;
+}
+
+/* TEXTO SOBRE MIM */
+
+.about-story {
+    max-width: 620px;
+    padding-top: 10px;
+}
+
+.about-story .about-lead {
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    line-height: 1.6;
+    letter-spacing: -0.7px;
+
+    color: var(--text);
+
+    margin-bottom: 27px;
+}
+
+.about-story > p:not(.about-lead) {
+    color: var(--secondary);
+
+    font-size: 15px;
+    font-weight: 400;
+
+    line-height: 1.95;
+    margin-bottom: 20px;
+}
+
+/* FRASE EM DESTAQUE */
+
+.about-quote {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 35px;
+    margin-bottom: 30px;
+
+    padding: 18px 23px;
+
+    background: #fff1f7;
+
+    border-left: 3px solid var(--accent);
+    border-radius: 0 14px 14px 0;
+}
+
+.quote-symbol {
+    color: var(--accent);
+
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.about-quote p {
+    color: #9b5076;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* LINK PARA PROJETOS */
+
+.about-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+    padding-bottom: 5px;
+
+    color: var(--accent-dark);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    border-bottom: 1px solid var(--accent);
+
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease;
+}
+
+.about-link:hover {
+    gap: 19px;
+    color: var(--accent);
+}
+
+.about-link span {
+    font-size: 18px;
+}
+
+/* ==========================================
+   CARD DA TRAJETÓRIA
+   ========================================== */
+
+.journey-card {
+    position: relative;
+
+    padding: 35px 32px 28px;
+
+    background: var(--white);
+
+    border: 1px solid #f0dce6;
+    border-radius: 25px;
+
+    box-shadow: 0 15px 45px rgba(164, 85, 124, 0.07);
+}
+
+/* CABEÇALHO DO CARD */
+
+.journey-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 23px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid #f3e5ec;
+}
+
+.journey-header > span:first-child {
+    color: var(--accent-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.journey-symbol {
+    color: var(--accent);
+
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* LINHA DO TEMPO */
+
+.journey-timeline {
+    position: relative;
+}
+
+.journey-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: 11px;
+    bottom: 30px;
+
+    width: 2px;
+    background: #f2d6e4;
+}
+
+/* ITENS DA TRAJETÓRIA */
+
+.journey-item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+    padding-bottom: 35px;
+}
+
+.journey-item:last-child {
+    padding-bottom: 0;
+}
+
+.journey-dot {
+    position: relative;
+    z-index: 1;
+
+    width: 18px;
+    height: 18px;
+
+    margin-top: 3px;
+    flex-shrink: 0;
+
+    background: var(--accent);
+
+    border: 5px solid #fbe6f0;
+    border-radius: 50%;
+}
+
+.journey-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.journey-tag {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.journey-info h3 {
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    color: var(--text);
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+
+    margin-bottom: 9px;
+}
+
+.journey-info p {
+    color: var(--secondary);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* RODAPÉ DA TRAJETÓRIA */
+
+.journey-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 32px;
+    padding: 14px;
+
+    background: #fff2f7;
+    border-radius: 12px;
+
+    color: #9e5d7d;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.journey-footer span {
+    color: var(--accent);
+    font-size: 19px;
+}
+
+/* ==========================================
+   FAIXA DE TECNOLOGIAS
+   ========================================== */
+
+.about-technologies {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    margin-top: 75px;
+    padding: 28px 32px;
+
+    background: var(--white);
+
+    border: 1px solid #f1dfe8;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(164, 85, 124, 0.035);
+}
+
+/* TÍTULO */
+
+.technologies-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.tech-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    background: #fae9f1;
+    border-radius: 14px;
+
+    color: var(--accent);
+    font-size: 25px;
+}
+
+.tech-label {
+    display: block;
+
+    color: var(--accent);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 4px;
+}
+
+.technologies-heading h3 {
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    color: var(--text);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* TECNOLOGIAS */
+
+.tech-tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.tech-tags span {
+    padding: 9px 14px;
+
+    background: #fff7fa;
+
+    border: 1px solid #f1dfe8;
+    border-radius: 100px;
+
+    color: #805568;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.tech-tags span:hover {
+    background: #fbe5ef;
+    border-color: #e8bdd1;
+    color: var(--accent-dark);
+}
+
+/* ==========================================
+   PROJETOS - EM DESENVOLVIMENTO
+   ========================================== */
+
+.projects-section {
+    padding: 95px 0 110px;
+    background: var(--bg);
+}
+
+.projects-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 340px;
+    padding: 55px 30px;
+
+    margin-top: 35px;
+
+    background: #fff7fa;
+
+    border: 1px dashed #eac9d9;
+    border-radius: 24px;
+
+    text-align: center;
+}
+
+/* ÍCONE */
+
+.projects-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 25px;
+
+    background: #fae9f1;
+    border-radius: 20px;
+
+    color: var(--accent);
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+/* STATUS */
+
+.projects-status {
+    margin-bottom: 15px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* TÍTULO */
+
+.projects-placeholder h3 {
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    color: var(--text);
+
+    font-size: clamp(21px, 3vw, 28px);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+
+    margin-bottom: 14px;
+}
+
+/* DESCRIÇÃO */
+
+.projects-placeholder p {
+    max-width: 450px;
+
+    color: var(--secondary);
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ==========================================
+   CONTATO
+   ========================================== */
+
+.contact-section {
+    padding: 100px 0 120px;
+    background: var(--bg);
+}
+
+/* PAINEL PRINCIPAL */
+
+.contact-panel {
+    position: relative;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, 0.9fr);
+
+    align-items: center;
+    gap: 70px;
+
+    margin-top: 40px;
+    padding: 65px 60px;
+
+    background: #fff1f7;
+
+    border: 1px solid #f3dce6;
+    border-radius: 30px;
+
+    overflow: hidden;
+}
+
+/* DECORAÇÃO */
+
+.contact-panel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    left: -125px;
+    bottom: -145px;
+
+    border: 30px solid rgba(196, 76, 137, 0.05);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+/* ==========================================
+   TEXTO DO CONTATO
+   ========================================== */
+
+.contact-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ETIQUETA */
+
+.contact-tag {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+    padding: 8px 13px;
+
+    background: var(--white);
+
+    border: 1px solid #f2dbe6;
+    border-radius: 100px;
+
+    color: var(--accent-dark);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.contact-tag-dot {
+    width: 7px;
+    height: 7px;
+
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+/* TÍTULO */
+
+.contact-content h3 {
+    max-width: 460px;
+    margin-top: 26px;
+
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    font-size: clamp(30px, 3.5vw, 45px);
+    font-weight: 800;
+
+    letter-spacing: -1.8px;
+    line-height: 1.3;
+
+    color: var(--text);
+}
+
+.contact-content h3 span {
+    color: var(--accent);
+}
+
+/* DESCRIÇÃO */
+
+.contact-description {
+    max-width: 460px;
+    margin-top: 20px;
+
+    color: var(--secondary);
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.95;
+}
+
+/* MENSAGEM FINAL */
+
+.contact-message {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    margin-top: 32px;
+
+    color: #9b5879;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.contact-message span {
+    color: var(--accent);
+    font-size: 19px;
+}
+
+/* ==========================================
+   CARDS DE CONTATO
+   ========================================== */
+
+.contact-links {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+/* ESTRUTURA */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+    padding: 20px 22px;
+
+    background: var(--white);
+
+    border: 1px solid #f0dfe7;
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* HOVER APENAS NOS LINKS */
+
+a.contact-item:hover {
+    transform: translateY(-3px);
+
+    border-color: #e8bdd1;
+
+    box-shadow: 0 9px 25px rgba(164, 85, 124, 0.08);
+}
+
+/* ÍCONES */
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 47px;
+    height: 47px;
+
+    flex-shrink: 0;
+
+    background: #fae9f1;
+    border-radius: 13px;
+
+    color: var(--accent);
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+/* INFORMAÇÕES */
+
+.contact-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-info h4 {
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+.contact-info p {
+    color: var(--secondary);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* SETAS */
+
+.contact-arrow {
+    color: var(--accent);
+
+    font-size: 21px;
+    font-weight: 500;
+
+    transition: transform 0.25s ease;
+}
+
+a.contact-item:hover .contact-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* ==========================================
+   E-MAIL E WHATSAPP
+   ========================================== */
+
+.contact-info .email-address,
+.contact-info .whatsapp-number {
+    color: var(--accent-dark);
+
+    user-select: text;
+    overflow-wrap: anywhere;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   RODAPÉ - BYisa
+   ========================================== */
+
+.footer {
+    background: #fff5f9;
+
+    border-top: 1px solid #f1dce6;
+
+    padding: 42px 0 20px;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+    padding-bottom: 35px;
+}
+
+/* LOGO E DESCRIÇÃO */
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 7px;
+}
+
+.footer-logo {
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+
+    font-size: 26px;
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    color: var(--text);
+}
+
+.footer-logo span {
+    color: var(--accent);
+}
+
+.footer-description {
+    color: var(--secondary);
+
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* BOTÃO VOLTAR AO INÍCIO */
+
+.footer-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    padding: 12px 18px;
+
+    background: var(--white);
+
+    border: 1px solid #f0dfe7;
+    border-radius: 100px;
+
+    color: var(--accent-dark);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-back:hover {
+    background: var(--accent-soft);
+    border-color: #e9c5d6;
+
+    transform: translateY(-2px);
+}
+
+.footer-back span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+/* PARTE INFERIOR */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+    padding-top: 20px;
+
+    border-top: 1px solid #f0dfe7;
+}
+
+.footer-bottom p {
+    color: #94838d;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   ACESSIBILIDADE
+   ========================================== */
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TELAS ATÉ 1000PX
+   ========================================== */
+
+@media (max-width: 1000px) {
+
+    .about-layout {
+        gap: 40px;
+    }
+
+    .journey-card {
+        padding: 30px 25px;
+    }
+
+    .about-technologies {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 22px;
+    }
+
+    .tech-tags {
+        justify-content: flex-start;
+    }
+
+    .contact-panel {
+        gap: 35px;
+        padding: 45px 35px;
+    }
+
+    .contact-content h3 {
+        font-size: 34px;
+    }
+
+    .contact-description {
+        font-size: 14px;
+    }
+
+    .contact-item {
+        padding: 17px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    /* HEADER */
+
+    .navbar {
+        gap: 25px;
+        padding: 12px 20px;
+    }
+
+    .nav-links a {
+        padding: 8px 11px;
+    }
+
+    /* INÍCIO */
+
+    .hero-grid {
+        grid-template-columns:
+            minmax(0, 1.2fr)
+            minmax(0, 0.8fr);
+
+        gap: 35px;
+    }
+
+    .hero-content {
+        padding-top: 15px;
+    }
+
+    .hero h1 {
+        font-size: clamp(35px, 4.5vw, 48px);
+        letter-spacing: -1.8px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .photo-label {
+        left: -10px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    /* NAVEGAÇÃO */
+
+    html {
+        scroll-padding-top: 165px;
+    }
+
+    .header {
+        width: 94%;
+        top: 10px;
+        margin-top: 15px;
+
+        border-radius: 28px;
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 14px 12px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 4px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 7px 11px;
+    }
+
+    /* INÍCIO */
+
+    .hero {
+        padding: 48px 0 85px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .hero-content {
+        padding-top: 0;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 0.7px;
+
+        padding: 8px 12px;
+    }
+
+    .hero h1 {
+        margin-top: 23px;
+
+        font-size: clamp(36px, 8vw, 46px);
+        letter-spacing: -1.7px;
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 1.8;
+
+        margin-top: 19px;
+    }
+
+    /* BOTÕES */
+
+    .hero-buttons {
+        margin-top: 27px;
+        gap: 11px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 11px 17px;
+
+        min-height: 45px;
+        font-size: 12px;
+    }
+
+    .hero-detail {
+        margin-top: 32px;
+    }
+
+    .hero-detail p {
+        font-size: 11px;
+    }
+
+    /* FOTO */
+
+    .hero-photo-wrap {
+        width: calc(100% - 30px);
+        max-width: 310px;
+
+        justify-self: center;
+    }
+
+    .photo-decoration {
+        top: -12px;
+        right: -12px;
+    }
+
+    .hero-photo {
+        border-radius: 24px;
+    }
+
+    .photo-label {
+        left: -10px;
+        bottom: -16px;
+
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+    /* SEÇÕES GERAIS */
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .section h2 {
+        font-size: 29px;
+    }
+
+    /* SOBRE MIM */
+
+    .about-section {
+        padding: 75px 0 85px;
+    }
+
+    .about-heading {
+        margin-bottom: 38px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(34px, 8vw, 45px);
+        letter-spacing: -1.5px;
+    }
+
+    .about-subtitle {
+        font-size: 14px;
+    }
+
+    .about-decoration {
+        right: -10px;
+        top: 30px;
+
+        font-size: 90px;
+        opacity: 0.35;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-story {
+        padding-top: 0;
+    }
+
+    .about-story .about-lead {
+        font-size: 19px;
+    }
+
+    .about-story > p:not(.about-lead) {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+    .about-quote {
+        padding: 15px 18px;
+    }
+
+    .about-quote p {
+        font-size: 13px;
+    }
+
+    .journey-card {
+        padding: 28px 23px;
+        border-radius: 20px;
+    }
+
+    .journey-info h3 {
+        font-size: 15px;
+    }
+
+    .journey-info p {
+        font-size: 12px;
+    }
+
+    /* TECNOLOGIAS */
+
+    .about-technologies {
+        margin-top: 50px;
+        padding: 24px 20px;
+
+        border-radius: 18px;
+    }
+
+    .technologies-heading {
+        gap: 12px;
+    }
+
+    .technologies-heading h3 {
+        font-size: 14px;
+    }
+
+    .tech-tags {
+        gap: 8px;
+    }
+
+    .tech-tags span {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    /* PROJETOS */
+
+    .projects-section {
+        padding: 65px 0 80px;
+    }
+
+    .projects-placeholder {
+        min-height: 300px;
+        padding: 45px 22px;
+
+        border-radius: 20px;
+    }
+
+    .projects-placeholder h3 {
+        font-size: 22px;
+    }
+
+    .projects-placeholder p {
+        font-size: 13px;
+    }
+
+    /* CONTATO */
+
+    .contact-section {
+        padding: 70px 0 90px;
+    }
+
+    .contact-panel {
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+        margin-top: 30px;
+
+        padding: 35px 24px;
+        border-radius: 24px;
+    }
+
+    .contact-tag {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .contact-content h3 {
+        margin-top: 22px;
+
+        font-size: 32px;
+        letter-spacing: -1.2px;
+    }
+
+    .contact-description {
+        font-size: 14px;
+        line-height: 1.85;
+
+        margin-top: 17px;
+    }
+
+    .contact-message {
+        margin-top: 24px;
+        font-size: 11px;
+    }
+
+    .contact-links {
+        gap: 12px;
+    }
+
+    .contact-item {
+        padding: 15px;
+
+        gap: 13px;
+        border-radius: 15px;
+    }
+
+    .contact-icon {
+        width: 43px;
+        height: 43px;
+
+        font-size: 17px;
+        border-radius: 12px;
+    }
+
+    .contact-info h4 {
+        font-size: 13px;
+    }
+
+    .contact-info p {
+        font-size: 11px;
+    }
+
+    .contact-info .email-address,
+    .contact-info .whatsapp-number {
+        font-size: 12px;
+    }
+
+    .contact-arrow {
+        font-size: 19px;
+    }
+
+    /* RODAPÉ */
+
+    .footer {
+        padding: 35px 0 22px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 22px;
+        padding-bottom: 28px;
+
+        text-align: center;
+    }
+
+    .footer-main {
+        align-items: center;
+    }
+
+    .footer-logo {
+        font-size: 25px;
+    }
+
+    .footer-description {
+        font-size: 12px;
+    }
+
+    .footer-back {
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 7px;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDADE - CELULARES PEQUENOS
+   ========================================== */
+
+@media (max-width: 380px) {
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+        padding: 6px 7px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 0.3px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .contact-panel {
+        padding: 28px 18px;
+    }
+
+    .contact-content h3 {
+        font-size: 28px;
+    }
+
+    .contact-item {
+        padding: 12px;
+        gap: 10px;
+    }
+}
+
+/* ==========================================
+   REDUÇÃO DE MOVIMENTO
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================
+   PROJETOS - CARDS
+   ========================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 340px));
+    gap: 28px;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+/* CARD */
+
+.project-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #e8c3d5;
+    box-shadow: 0 18px 40px rgba(132, 73, 103, 0.11);
+}
+
+/* CAPA DO PROJETO */
+
+.project-cover {
+    position: relative;
+    min-height: 195px;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.project-cover-climore {
+    background: linear-gradient(
+        135deg,
+        #dceefa 0%,
+        #eef7fc 55%,
+        #c9e4f5 100%
+    );
+}
+
+.project-cover-planora {
+    background: linear-gradient(
+        135deg,
+        #fae9f1 0%,
+        #fdf6fa 55%,
+        #eddcf3 100%
+    );
+}
+
+.project-cover-planora .project-cover-icon {
+    color: #c44c89;
+}
+
+.project-cover-planora .project-cover-text > span {
+    color: #8a4a70;
+}
+
+.project-cover-planora .project-cover-text h3 {
+    color: #4a2540;
+}
+
+.project-cover-planora .project-cover-text p {
+    color: #7d5a6e;
+}
+
+.project-cover-icon {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+
+    color: #e8a83d;
+    font-size: 75px;
+    line-height: 1;
+    opacity: 0.85;
+}
+
+.project-cover-text {
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.project-cover-text > span {
+    color: #54758c;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.project-cover-text h3 {
+    margin-top: 5px;
+
+    color: #263f52;
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.project-cover-text p {
+    color: #58768a;
+    font-size: 12px;
+}
+
+/* CONTEÚDO */
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content > h3 {
+    color: var(--text);
+    font-family: "Plus Jakarta Sans", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.project-description {
+    min-height: 76px;
+    margin-top: 10px;
+
+    color: var(--secondary);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* TECNOLOGIAS */
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 18px;
+}
+
+.project-technologies span {
+    padding: 7px 11px;
+
+    background: #fff5f9;
+    border: 1px solid #f1dfe8;
+    border-radius: 100px;
+
+    color: #805568;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* LINK */
+
+.project-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 24px;
+    padding-top: 17px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--accent-dark);
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+}
+
+.project-link:hover {
+    color: var(--accent);
+}
+
+.project-link span {
+    font-size: 19px;
+    transition: transform 0.2s ease;
+}
+
+.project-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .project-cover {
+        min-height: 180px;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .project-description {
+        min-height: auto;
+    }
+}
+
+.projects-grid {
+    justify-content: start;
+}
